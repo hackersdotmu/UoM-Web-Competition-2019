@@ -1,0 +1,107 @@
+.topnav {
+  background-color: #3339;
+  overflow: hidden;
+  position: fixed;
+  z-index:999;
+  width: 100vw;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddddddCC;
+  color: black;
+}
+
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #0D847C99;
+  color: white;
+  font: bold;
+}
+ .topnav .user_name, .topnav .user_name:hover{
+	background:0;
+	color: white;
+	font: bold;
+}
+body{
+	background: url("minimalist.png") no-repeat;
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
+	scrollbar-color: #FFFFFFCC transparent ;
+	scrollbar-width: thin;
+	
+}
+iframe{
+	width:98.5vw;
+	height:92vh;
+}
+
+.pg_content{
+	width:100%;
+	height:100%;
+}
+.header{
+	opacity:0;
+}
+.header{
+	border-radius: 10px;
+	border:3px solid white;
+	background:rgba(127,127,127,0.5);
+	animation: anim1 2s;
+}
+@keyframes anim1{
+	0%{
+		opacity:0;
+	}
+	75%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+.ques_cont{
+	color: black;
+	filter:blur(5px);
+	font: bold 50px;
+	width:75%;
+	height:25%;
+	border: 5px solid white;
+	background-color: rgba(128,128,128,0.5);
+	padding: 10px;
+	margin-left:12vw;
+	margin-top:25vh;
+	position: absolute;
+	overflow: auto;
+	scrollbar-color: #FFFFFFCC transparent ;
+	scrollbar-width: thin;
+}
+.ques{
+	color:white;
+	font: bold 50px;
+	width: 75%;
+	height:25%;
+	border: 5px solid;
+	background-color: rgba(0,0,0,0.3);
+	padding: 10px;
+	margin-left:12vw;
+	margin-top:25vh;
+	position: absolute;
+	overflow:auto;
+	scrollbar-color: #FFFFFFCC transparent ;
+	scrollbar-width: thin;
+	
+}
+
+
