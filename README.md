@@ -18,8 +18,9 @@ Duality can easily be installed with the following steps:
 - Install nodejs from *https://nodejs.org* if you do not have it.
 - Rename the file `.env.example` to `.env` from the installation directory.
   1. If you want to host Duality on another port (optional): Edit `PORT=80` at Line 1 in the `.env` file you just renamed.
-- If you will host Duality (optional): 
+- If you will host Duality on a specific domain(optional): 
   1. Edit `config.js` and replace `http://localhost:` on Line 5 by your domain.
+  2. Update captcha key and secret in `.env`. You can get captcha key and secret for your domain at *https://www.google.com/recaptcha/admin#list*.
 - Run `npm install` from the installation directory.
 - Run `node bin/www` from the the installation directory to start Duality.
 - Duality will now be available at *http://localhost:80/* if you did not edit the port or domain.

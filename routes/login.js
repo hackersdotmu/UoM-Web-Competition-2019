@@ -10,7 +10,7 @@ var db = require('../config').db;
 var Mailjet = require('node-mailjet').connect(process.env.CONTACT_MAIL, process.env.CONTACT_MAIL_PASS);
 
 /* GET login page. */
-router.get('/', function (req, res) {
+router.get('/', function(req, res) {
     if (req.query.message) {
         message = {};
         message.msg = req.query.message;
@@ -29,17 +29,17 @@ router.get('/', function (req, res) {
         res.render('login', {
             title: 'Webcup',
             message: message,
-
+            captcha: config.captcha,
             session: req.session,
         });
     };
 });
 
-router.post('/auth', function (req, res) {
+router.post('/auth', function(req, res) {
     var uname = req.body.un;
     config.db.users.find({
         uname: uname
-    }, function (err, user_details) {
+    }, function(err, user_details) {
         if (err) {
             console.log(err);
         } else {
@@ -85,7 +85,7 @@ router.post('/auth', function (req, res) {
     });
 });
 
-router.post('/register', function (req, res) {
+router.post('/register', function(req, res) {
     if (req.body['g-recaptcha-response']) { //TODO: in depth check
 
         auth_token = crypto.createHash('md5').update(req.body.uname).digest("hex");
@@ -142,23 +142,25 @@ router.post('/register', function (req, res) {
         };
         config.db.users.find({
             uname: new_user.uname
-        }, function (err, user_details) {
+        }, function(err, user_details) {
             if (err) {
                 console.log(err);
             } else {
                 if (!user_details[0]) {
-                    config.db.users.insert(new_user, function (err, user_details) {
+                    config.db.users.insert(new_user, function(err, user_details) {
                         console.log(user_details);
                         var url = `${process.env.URL}:${process.env.PORT}/login/verify/${user_details._id}`
                         console.log(url);
-                        
+
                         // Verify Email
                         Mailjet.post('send').request({
                             'FromEmail': process.env.MAIL_TO_1,
                             'FromName': 'DualityTeam',
-                            'Subject':  "Kindly Verify your Email",
-                            'Text-part':  `<a href="${process.env.URL}:${process.env.PORT}/login/verify/${user_details._id}">Verify</a>`,
-                            'Recipients': [{'Email':user_details.email}]
+                            'Subject': "Kindly Verify your Email",
+                            'Text-part': `<a href="${process.env.URL}:${process.env.PORT}/login/verify/${user_details._id}">Verify</a>`,
+                            'Recipients': [{
+                                'Email': user_details.email
+                            }]
                         })
 
                         delete new_user.hash;
@@ -176,8 +178,8 @@ router.post('/register', function (req, res) {
     }
 });
 
-router.get('/logout', function (req, res) {
-    req.session.destroy(function (err) {
+router.get('/logout', function(req, res) {
+    req.session.destroy(function(err) {
         res.redirect(config.domain + "/login?message=" + encodeURIComponent("S.You have logged out!"));
     });
 
@@ -192,7 +194,7 @@ router.get('/verify/:token', (req, res) => {
             if (err) {
                 res.send(err)
             } else {
-                var user_up = { ...user,
+                var user_up = {...user,
                     verified: true
                 }
                 console.log(user_up);
@@ -204,7 +206,9 @@ router.get('/verify/:token', (req, res) => {
                     if (err) {
                         res.send(err)
                     } else {
-                        req.session.user = {...req.session.user, verified: true}
+                        req.session.user = {...req.session.user,
+                            verified: true
+                        }
                         res.redirect("/account?message=" + encodeURIComponent("S.Account Verified!"));
                     }
                 })

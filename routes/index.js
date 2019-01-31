@@ -59,6 +59,7 @@ router.get('/', function(req, res) {
                                             session: req.session,
                                             questions: [...questions],
                                             myquestions: myquestions,
+                                            captcha: config.captcha,
                                             notify: notify
                                         });
                                     }
@@ -88,6 +89,7 @@ router.get('/', function(req, res) {
                                         session: req.session,
                                         questions: [...questions],
                                         myquestions: myquestions,
+                                        captcha: config.captcha,
                                         notify: notify
                                     });
                                 }
