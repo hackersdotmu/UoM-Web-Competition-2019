@@ -28,3 +28,4 @@ Backend: PHP, mySql
   password: 123456
   
 3. Of course, you can create new users & posts.
+4. Rename base folder to "web competition" for error prevention.
