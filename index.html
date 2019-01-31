@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCupRevised_Final_2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Community-ChatComments.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Contact-Us.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/feed_profile-1.css">
+    <link rel="stylesheet" href="assets/css/feed_profile.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-1.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Header--Menu--Sections.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color:#ffffff;font-family:'Merriweather Sans', sans-serif;margin:0px;/*height:1500;*/">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="height:53px;font-family:'Merriweather Sans', sans-serif;">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color:#40514e;">MO LAVENIR</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1" style="background-color:#e4f9f5;color:#11999e;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav"></ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"><i class="fa fa-search" style="color:#40514e;"></i></label><input class="form-control search-field" type="search" name="search" id="search-field" style="color:#40514e;margin:-2px;"></div>
+                </form><a class="btn btn-light action-button" role="button" href="signup.html" style="background-color:#11999e;color:#11999e;margin:8px;">SIGN UP</a><a class="btn btn-light action-button" role="button" href="login.html" style="background-color:#11999e;color:#e4f9f5;">LOG IN</a></div>
+        </div>
+    </nav>
+    <div>
+        <div class="header-blue" style="margin-top:41px;">
+            <div class="container hero" style="margin-top:50px;">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                        <h1 class="text-center" style="font-size:35px;">Welcome to Mo Lavenir!</h1>
+                        <p class="text-left">Mo Lavenir is a portal for &nbsp;Mauritian students that allows them to find resources or find other students from different fields thats could help in their way to build real products.</p><a class="btn btn-light btn-lg action-button"
+                            role="button" href="about.html">Learn More</a></div>
+                    <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder"><img src="assets/img/logoMoLavenir.png" style="margin:30px;margin-top:149px;width:525px;height:300px;padding:0px;">
+                        <div class="iphone-mockup">
+                            <div class="screen"><img src="assets/img/logoMoLavenir.png" style="width:235%;transform:rotate(90deg);margin:-6px;margin-top:0;padding:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:318px;padding-right:151px;padding-bottom:26px;padding-left:-59px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="article-list"></div><div class="container"><?php  
+$host = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
+$dbName = "nexus";
+$connect = new mysqli($host, $dbUsername, $dbPassword, $dbName);
+ $query = "SELECT courses, count(*) as number FROM userprofile GROUP BY courses";  
+ $result = mysqli_query($connect, $query);  
+ ?>  
+ <!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>PIE CHART</title>  
+           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
+           <script type="text/javascript">  
+           google.charts.load('current', {'packages':['corechart']});  
+           google.charts.setOnLoadCallback(drawChart);  
+           function drawChart()  
+           {  
+                var data = google.visualization.arrayToDataTable([  
+                          ['Courses', 'Number'],  
+                          <?php  
+                          while($row = mysqli_fetch_array($result))  
+                          {  
+                               echo "['".$row["courses"]."', ".$row["number"]."],";  
+                          }  
+                          ?>  
+                     ]);  
+                var options = {  
+                      title: 'Percentage of Courses',  
+                      //is3D:true,  
+                      pieHole: 0.4  
+                     };  
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
+                chart.draw(data, options);  
+           }  
+           </script>  
+      </head>  
+      <body>  
+           <br /><br />  
+           <div style="width:900px;">  
+                <h3 align="center">PIE CHART</h3>  
+                <br />  
+                <div id="piechart" style="width: 900px; height: 500px;"></div>  
+           </div>  
+      </body>  
+ </html> </div>
+    <p class="text-center" style="padding:25px;height:-10px;"><br>This pie chart shows a real-time percentage about users who specialise in their different fields.<br><br><br></p><div class="right
+            "></div>
+    <div class="features-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Features </h2>
+            </div>
+            <div class="row justify-content-center features">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-map-marker icon"></i>
+                        <h3 class="name">Audience</h3>
+                        <p class="description">Our main audience are the students of Mauritius and companies based in Mauritius.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-comments icon"></i>
+                        <h3 class="name">Always available</h3>
+                        <p class="description">A user can search for academic and research interest.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-list-alt icon"></i>
+                        <h3 class="name">Feed</h3>
+                        <p class="description">A user can post any queries about a specific job and he/she can reacts to the queary and send its contact details.<br></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-child icon"></i>
+                        <h3 class="name">Reliability</h3>
+                        <p class="description">The portal is user friendly for both IT literate and non-IT literate.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-check icon"></i>
+                        <h3 class="name">Security</h3>
+                        <p class="description">Private informations are stored in an encrypted fashion.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-phone icon"></i>
+                        <h3 class="name">Contact</h3>
+                        <p class="description">An employer can contact a student or vise-versa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color:#40514e;color:#e4f9f5;">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="feed.html">Services</a></li>
+                <li class="list-inline-item"><a href="about.html">About</a></li>
+                <li class="list-inline-item"><a href="terms.html">Terms</a></li>
+                <li class="list-inline-item"><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Mo Lavenir © 2019</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>
