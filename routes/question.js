@@ -20,6 +20,7 @@ router.get('/new', function(req, res) {
     if (req.session.user) {
         res.render('question/new', {
             session: req.session,
+            captcha: config.captcha,
         });
     } else {
         res.redirect('/')
