@@ -2,9 +2,7 @@
 webcup 2019 git
 testing  
 
-<<<<<<< HEAD
-Website of Developers Conference 2019 in Mauritius  
-https://conference.mscc.mu/  
+<<<<<<< HEAD 
 
 # How to run in development
 
