@@ -5,55 +5,54 @@
 $Email=$Hashed_password=$Past_background=$Disability=$Passport_num=$Passport_exp_date=$Languages=$Preferred_job_occupation=$Preferred_economic_sector=$Driving_license=$CPE_result=$CPE_year=$work_exp_date_from=$work_exp_date_to=$work_exp_position=$work_exp_employer_name=$work_exp_sector=$work_exp_desc=$cv=$covering_letter=$scanned_id_card=$morality_certificate=$sc_id=$hsc_id=$tertiary_id="";
 
 ?>
-<html lang="en" class=" canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers no-applicationcache fontface"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Mauritius Jobs</title>
-<meta name="description" content="Mauritiusjobs is the no1 job portal in Mauritius where jobseekers can search for vacancies/jobs in Mauritius or abroad posted by registered employers.">
-<link rel="icon" href="https://www.mauritiusjobs.mu/images/mauritius.ico" type="image/gif" sizes="16x16">
-<link media="all" rel="stylesheet" type="text/css" href="https://www.mauritiusjobs.mu/css/reset.css">
-<link media="all" rel="stylesheet" type="text/css" href="https://www.mauritiusjobs.mu/css/page.css?1548792585">
-<link media="all" rel="stylesheet" type="text/css" href="https://www.mauritiusjobs.mu/css/menu.css?1548792585">
-<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script type="text/javascript" src="https://www.mauritiusjobs.mu/js/menu.js"></script><style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-50481647-1','mauritiusjobs.mu');ga('send','pageview');</script>
-<script language="JavaScript" type="text/javascript">if(navigator.appName=='Microsoft Internet Explorer'){function NOclickIE(e){if(event.button==2||event.button==3){return false;}return true;}document.onmousedown=NOclickIE;document.onmouseup=NOclickIE;window.onmousedown=NOclickIE;window.onmouseup=NOclickIE;}
-else{function NOclickNN(e){if(document.layers||document.getElementById&&!document.all){if(e.which==2||e.which==3){return false;}}}if(document.layers){document.captureEvents(Event.MOUSEDOWN);document.onmousedown=NOclickNN;}document.oncontextmenu=new Function("return false")}</script>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Student Job Portal</title>
+<meta name="description" content="Student Job Portal is the no1 job portal in Mauritius where jobseekers can search for vacancies/jobs in Mauritius or abroad posted by registered employers.">
+
+<link media="all" rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link media="all" rel="stylesheet" type="text/css" href="css/page1d75.css?1548684256"/>
+<link media="all" rel="stylesheet" type="text/css" href="css/menu1d75.css?1548684256"/>
+<script src="../code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','../www.google-analytics.com/analytics.js','ga');ga('create','UA-50481647-1','');ga('send','pageview');</script>
+<!-- <script language="JavaScript" type="text/javascript">if(navigator.appName=='Microsoft Internet Explorer'){function NOclickIE(e){if(event.button==2||event.button==3){return false;}return true;}document.onmousedown=NOclickIE;document.onmouseup=NOclickIE;window.onmousedown=NOclickIE;window.onmouseup=NOclickIE;} -->
 </head>
-<body style="-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;" unselectable="on" onload="document.jobseeker_registration_form.jobseeker_email.focus()">
-			<div id="header">
+<body>
+<div id="header">
 		<div id="banner">
-			<img src="https://www.mauritiusjobs.mu/images/mauritius_flag.gif" id="mauritius_flag">
-			<img src="https://www.mauritiusjobs.mu/images/govt.png">
-			<img src="https://www.mauritiusjobs.mu/images/jobs_logo.png" id="jobs_logo">
-			<br>Ministry of Labour, Industrial Relations, Employment and Training
+			<<!-- img src="images/mauritius_flag.gif" id="mauritius_flag">
+			<img src="images/govt.png">
+			<img src="images/jobs_logo.png" id="jobs_logo"> -->
+			<br>PLACEMENTS/JOBS IN MAURITIUS BY INDUSTRY SECTOR  
 		</div>
 	<div class="menu">
 		<nav id="topNav">
 			<ul>
-				<li class="first"><a href="https://www.mauritiusjobs.mu/" title="Home">Home</a></li>
-				<li><a href="#" title="About Us">About Us<span>^</span></a>
-					<ul>
-						<li><a href="http://www.mauritiusjobs.mu/about/mlire" title="About MLIRE">Ministry of Labour, Industrial Relations, Employment and Training</a></li>
-						<li><a href="http://www.mauritiusjobs.mu/about/iom" title="About IOM">International Organisation for Migration</a></li>
-					</ul>
+				<li class="first"><a href="index.php" title="Home">Home</a></li>
+				<li><a href="about/iom.html" title="About Us">About Us</a>
+					  
 				</li>
 				
-				<li>					<a href="http://www.mauritiusjobs.mu/jobseeker" title="Jobseeker">Jobseeker</a>
+				<li>					<a href="jobseeker.php" title="Jobseeker">Jobseeker</a>
 									        
 				</li>
 				<li>
-									<a href="http://www.mauritiusjobs.mu/employer" title="Employer">Employer</a>
+									<a href="employer.html" title="Employer">Employer</a>
 													</li>
-				<li><a href="https://www.mauritiusjobs.mu/jobsearch" title="Jobs Search">Jobs Search</a></li>
-				<li class="last"><a href="http://www.mauritiusjobs.mu/contact" title="Contact us ">Contact Us</a></li>
+				<li><a href="jobsearch.html" title="Jobs Search">Jobs Search</a></li>
+				<li class="last"><a href="contact.html" title="Contact us ">Contact Us</a></li>
 			</ul>
 		</nav>
 	</div>
 </div>
 <header>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="http://www.mauritiusjobs.mu/css/A.jobseeker.css.pagespeed.cf.u6fziZE49o.css">
+	
 	<script>$(function(){$("#datepicker").datepicker({minDate:" +1D",maxDate:"+10Y",changeMonth:"true",changeYear:"true"});$("#datepicker").datepicker("option","dateFormat","yy-mm-dd");$("#datepicker").datepicker("option","showAnim","drop");$(".close-red").click(function(){$("#message-red").fadeOut("slow");});});</script>
 </header>
 
@@ -181,43 +180,29 @@ else{function NOclickNN(e){if(document.layers||document.getElementById&&!documen
 
 <script>(function($){var nav=$("#topNav");nav.find("li").each(function(){if($(this).find("ul").length>0){$("<span>").text("^").appendTo($(this).children(":first"));$(this).mouseenter(function(){$(this).find("ul").stop(true,true).slideDown();});$(this).mouseleave(function(){$(this).find("ul").stop(true,true).slideUp();});}});})(jQuery);</script>
 
-<div id="footer">
+<div id="footer" style="height: 0%";>
 	<div id="links">
-		<a href="http://www.mauritiusjobs.mu/feedback" title="Feedback Form">Feedback Form</a>
-		<a href="http://www.mauritiusjobs.mu/website_map" title="Website Map">Website Map</a>
-		<a href="http://www.mauritiusjobs.mu/eic_locations" title="EIC Location">EIC Location</a>
-		<a href="http://www.mauritiusjobs.mu/faq" title="FAQ">FAQ</a>
-		<a href="http://www.mauritiusjobs.mu/legislations" title="Legislations">Legislations</a>
-		<a href="http://www.mauritiusjobs.mu/downloads" title="Downloads">Downloads</a>
-		<a href="http://www.mauritiusjobs.mu/publications" title="Publications">Publications</a>
-		<a href="http://www.mauritiusjobs.mu/statistics" title="Statistics">Statistics</a>
-		<a href="http://www.mauritiusjobs.mu/links" title="Links">Links</a>
-		<a href="http://www.mauritiusjobs.mu/tips" title="Tips">Tips</a>
+		<a href="feedback.html" title="Feedback Form">Feedback Form</a>
+		<a href="website_map.html" title="Website Map">Website Map</a>
+		<a href="eic_locations.html" title="EIC Location">EIC Location</a>
+		<a href="faq.html" title="FAQ">FAQ</a>
+		<a href="legislations.html" title="Legislations">Legislations</a>
+		<a href="downloads.html" title="Downloads">Downloads</a>
+		<a href="publications.html" title="Publications">Publications</a>
+		<a href="statistics.html" title="Statistics">Statistics</a>
+		<a href="links.html" title="Links">Links</a>
+		<a href="tips.html" title="Tips">Tips</a>
 	</div>
-	<div id="logo">
-		<div class="european_logo">
-			<a href="http://www.eeas.europa.eu/delegations/mauritius/index_en.htm" target="blank"><img src="https://www.mauritiusjobs.mu/images/european.gif" width="75" height="50" title="European Union"></a><br>
-			This project is co-funded by the European Union
-		</div>
-		<div class="italian_logo">
-			<a href="http://www.lavoro.gov.it" target="blank"><img src="https://www.mauritiusjobs.mu/images/italiana.png" width="65" height="55" title="Ministero Del Lavoro e Delle Politiche Sociali"></a><br>
-			Ministero Del Lavoro e Delle Politiche Sociali
-		</div>
-		<div class="iom_logo">
-			<a href="http://www.iom.int" target="blank"><img src="https://www.mauritiusjobs.mu/images/iom-logo.png" width="56" height="55" title="International Organisation for Migration"></a><br>
-			International Organisation for Migration (IOM)
-		</div>
-	</div>
+	
 	<div id="copyright">
-		© Copyright Mauritius Jobs. 2019. All rights reserved.
+		&copy; Copyright Student Job Portal. 2019. All rights reserved.
 	</div>
-	<span id="developed_by_reefcube">Designed &amp; Developed by <a href="http://www.reefcube.mu" target="_blank">Reefcube Ltd</a></span>
-	<span id="ssl"><img src="https://www.mauritiusjobs.mu/images/ssl.png" width="20"> <span class="ssl_txt">SSL Certified</span></span>
+	  
 	<span id="browser">
 		<span id="browser_txt">Compatible on latest </span>
-		<img src="https://www.mauritiusjobs.mu/images/chrome.ico" width="20" style="width: 21px;position: relative;margin-top: 0px;height: 23px;top: 2px;" title="Google Chrome">
-		<img src="https://www.mauritiusjobs.mu/images/firefox.ico" width="20" title="Mozilla Firefox"> 
-		<img src="https://www.mauritiusjobs.mu/images/safari.ico" width="20" title="Safari">
+		<img src="images/chrome.ico" width="20" style="width: 21px;position: relative;margin-top: 0px;height: 23px;top: 2px;" title="Google Chrome">
+		<img src="images/firefox.ico" width="20" title="Mozilla Firefox"> 
+		<img src="images/safari.ico" width="20" title="Safari">
 	</span>
 </div>
 
