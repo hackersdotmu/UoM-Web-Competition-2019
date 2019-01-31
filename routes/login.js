@@ -71,10 +71,10 @@ router.post('/auth', function(req, res) {
                         res.redirect('/');
                         // res.redirect(config.domain + "/account?message=" + encodeURIComponent("S.Successfully logged in!"));
                     } else {
-                        res.redirect(config.domain + "/login?message=" + encodeURIComponent("Error: Your account was banned"));
+                        res.redirect(config.domain + "/login?message=" + encodeURIComponent("Error: Incorrect username or password"));
                     }
                 } else {
-                    res.redirect(config.domain + "/login?message=" + encodeURIComponent("Error: Incorrect username or password")); //Incorrect password but abstraction for security purposes
+                    res.redirect(config.domain + "/login?message=" + encodeURIComponent("Error: Ypu account was banned")); //Incorrect password but abstraction for security purposes
                 }
 
             } else {
