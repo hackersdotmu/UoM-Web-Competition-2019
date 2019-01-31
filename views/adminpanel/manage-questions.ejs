@@ -1,0 +1,98 @@
+<% include ../Partials/header %>
+<div class='page light'>
+    <div class='container height-full'>
+        <br><br><br>
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href='/adminpanel'>Admin Panel</a></li>
+                    <li class="active"><a>Manage Questions</a></li>
+                    </li>
+                </ol>
+            </div>
+        </div><br>
+        <% if (message!=""){ %>
+        <div class="col-lg-10 ">
+            <%if (message.type=='Success'){ %>
+            <div role="alert" class="alert alert-success">
+                <% }else{ %>
+                <div role="alert" class="alert alert-danger">
+                    <% } %>
+                    <font color='black'>
+                        <%= message.msg %>
+                    </font>
+                </div>
+            </div>
+            <% } %>
+            <div class="row">
+                <div class="col-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Manage Questions</h3><br>
+                            <div class="box-tools">
+                                <div class="form-group col-md-6 mx-md-auto">
+                                    <div class="widget search-widget">
+                                        <form action="/adminpanel/manage-questions" method="get">
+                                            <input class="form-control" type="text" name="keyword" id="textArea"
+                                                placeholder="Search Questions">
+                                            <button type="submit" class="material-icons">search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Ban</th>
+                                    <th>Time</th>
+                                    <th>Reports</th>
+                                    <th>Reply Count</th>
+                                    <th>Votes</th>
+                                </tr>
+                                <% for(question in questions){ %>
+                                <% question=questions[question]; %>
+                                <tr>
+                                    <td>
+                                        <a href="/question/view/<%=question._id%>">
+                                            <%=question.title%>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <% if(question.visible==true){%>
+                                        <a class="badge badge-pill badge-danger" href="/question/delete/<%=question._id%>">Ban
+                                            Question</a>
+                                        <% }else{ %>
+                                        <a class="btn disabled small" disabled>Banned
+                                            Question</a>
+                                        <% } %>
+                                    </td>
+                                    <td>
+                                        <%=question.time%>
+                                    </td>
+                                    <td>
+                                        <%=question.reports.length%>
+                                    </td>
+                                    <td>
+                                        <%=question.replies.length%>
+                                    </td>
+                                    <td>
+                                        <%=question.votes.length%>
+                                    </td>
+
+                                </tr>
+                                <% } %>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../Partials/footer %>

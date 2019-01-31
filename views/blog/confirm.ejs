@@ -1,0 +1,18 @@
+<% include ../Partials/header %>
+<% var new_blog = {title:title, content:content, uname:uname} %>
+
+<br>
+<br>
+<div class="container height-full">
+  <div class="paper-card col-lg-10 col-md-12 mx-md-auto">
+    <br>
+    <%- content %>
+    <br>
+    <h6 class="float-right">Author: <%= session.user.uname %></h6>
+    <br>
+    <hr>
+    <button onclick="post('/blog/save','<%= JSON.stringify(new_blog) %>')" class="btn" style="display:block; margin: auto">Confirm <i style=" vertical-align:middle" class="material-icons">done</i></button>
+  </div>
+</div>
+<script src="/js/blog.js"></script>
+<% include ../Partials/footer %></br>

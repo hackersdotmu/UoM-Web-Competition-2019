@@ -1,0 +1,26 @@
+<% include ../Partials/header %>
+<br>
+<br>
+<div class="container height-full">
+<div class="row">
+  <% if(items){ items.forEach(item => { %>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-1">
+      <div class="card">
+        <div class="card-header"><%= item.name %></div>
+        <div class="card-body">
+            <%= item.description %>
+        </div>
+        <div class="card-footer">
+          <span class="card-link">
+              Quantity: <%= item.quantity %>
+          </span>          
+          <span class="card-link float-right">
+              Rating: <% if(item.rating==-1) { %>N/A<% } else { %><%= item.rating %><% } %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <% });} %>
+</div>
+</div>
+<% include ../Partials/footer %>

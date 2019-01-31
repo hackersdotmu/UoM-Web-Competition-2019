@@ -1,0 +1,19 @@
+<div class="modal fade" id="modalNewAnswer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+  style="display: none;">
+  <div class="modal-dialog width-800" role="document">
+    <div class="modal-content no-r "><a href="#" data-dismiss="modal" aria-label="Close" class="paper-nav-toggle active"><i></i></a>
+      <div class="modal-body no-p">
+        <div class="text-center p-40 p-b-0">
+          <h3>Add an answer</h3>
+        </div>
+        <div class="light p-40 b-t-b">
+          <form action="/question/<%= question._id %>/answer" method="POST">
+              <textarea rows="10" type="text" name="answer" class="form-control form-control-lg" placeholder="Answer"></textarea>
+              <br>
+              <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

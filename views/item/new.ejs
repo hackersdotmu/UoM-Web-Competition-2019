@@ -1,0 +1,31 @@
+<% include ../Partials/header %>
+<br>
+<br>
+<div class="container height-full">
+  <div class="paper-card col-lg-8 mx-md-auto">
+    <h4>New Item</h4>
+    <br>
+    <form action="/item/new" method="post">
+      <div class="row form-group has-icon">
+        <label class="col-md-4 col-sm-6" for="name">
+          <h6>Name</h6>
+        </label>
+        <input class="col-md-8 col-sm-6" type="text" id="name" name="name" placeholder="Incredible Granite Shoes">
+      </div>
+      <div class="row form-group has-icon">
+        <label class="col-md-4 col-sm-6" for="description">
+          <h6>Description</h6>
+        </label>
+        <input class="col-md-8 col-sm-6" type="text" id="description" name="description" placeholder="Ut molestiae veritatis sit fuga consectetur beatae aut iste.">
+      </div>
+      <div class="row form-group has-icon">
+        <label class="col-md-4 col-sm-6" for="quantity">
+          <h6>Quantity</h6>
+        </label>
+        <input class="col-md-8 col-sm-6" type="number" id="quantity" name="quantity" min="0" max="100", step="1" value="1">
+      </div>
+      <button class="btn" style="display:block; margin: auto">Add <i style=" vertical-align:middle" class="material-icons">add</i></button>
+    </form>
+  </div>
+</div>
+<% include ../Partials/footer %>

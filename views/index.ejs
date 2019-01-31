@@ -1,0 +1,7 @@
+<% include Partials/header %>
+<% if(session.user) { %>
+    <% include home-authed %>
+<% } else { %>
+    <% include home %>
+<% } %>
+<% include Partials/footer %>

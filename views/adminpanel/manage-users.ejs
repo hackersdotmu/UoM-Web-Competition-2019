@@ -1,0 +1,107 @@
+<% include ../Partials/header %>
+    <div class='page light'>
+        <div class='container height-full'>
+            <br><br><br>
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li><a href='/adminpanel'>Admin Panel</a></li>
+                        <li class="active"><a>Manage Users</a></li>
+                    </ol>
+                </div>
+            </div><br>
+            <% if (message!=""){ %>
+                <div class="col-lg-10 ">
+                    <%if (message.type=='Success'){ %>
+                        <div role="alert" class="alert alert-success">
+                            <% }else{ %>
+                                <div role="alert" class="alert alert-danger">
+                                    <% } %>
+                                        <font color='black'>
+                                            <%= message.msg %>
+                                        </font>
+                                </div>
+                        </div>
+                        <% } %>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            <h3 class="box-title">User Management Panel</h3><br>
+                                            <div class="box-tools">
+                                                <div class="form-group col-md-6 mx-md-auto">
+                                                    <div class="widget search-widget">
+                                                        <form action="/adminpanel/manage-users" method="get">
+                                                            <input class="form-control" type="text" name="keyword" id="textArea" placeholder="Search Users">
+                                                            <button type="submit" class="material-icons">search</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-body table-responsive no-padding">
+                                        <table class="table table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Uname</th>
+                                                    <th>Admin</th>
+                                                    <th>Ban</th>
+                                                    <th>Email</th>
+                                                    <th>Last Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <!--<th>Experience</th>
+                                    <th>Votes</th>
+                                    <th>Posts</th>
+                                    <th>Comments</th>-->
+                                                </tr>
+                                                <% for(user in users){ %>
+                                                    <% user=users[user]; %>
+                                                        <tr>
+                                                            <td>
+                                                                <%=user.uname%>
+                                                            </td>
+                                                            <td>
+                                                                <% if(user.admin==true){%>
+                                                                    <a class="badge badge-pill badge-success" href="#">True</a>
+                                                                    <% }else{ %>
+                                                                        <a class="badge badge-pill badge-danger" href="/adminpanel/updates?type=useradmin&params=true&target=<%=user.uname%>&keyword=<%=keyword%>">False</a>
+                                                                        <% } %>
+                                                            </td>
+                                                            <td>
+                                                                <% if(user.ban==true){%>
+                                                                    <a class="badge badge-pill badge-danger" href="/adminpanel/updates?type=userban&params=false&target=<%=user.uname%>&keyword=<%=keyword%>">True</a>
+                                                                    <% }else{ %>
+                                                                        <a class="badge badge-pill badge-success" href="/adminpanel/updates?type=userban&params=true&target=<%=user.uname%>&keyword=<%=keyword%>">False</a>
+                                                                        <% } %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.email%>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.first_name%>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.last_name%>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.email%>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.phone%>
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+        </div>
+    </div>
+    <% include ../Partials/footer %>
