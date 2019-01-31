@@ -8,8 +8,8 @@ Duality; derived from [Particle Duality](https://en.wikipedia.org/wiki/Wave%E2%8
 
 #### Members
 
-  1. [Nirmal](https://github.com/nirmal-k-r)
-  2. [Isfaaq](https://github.com/Isfaaq)
+  1. @nirmal-k-r
+  2. @Isfaaq
 
 ---
 ### Installation - Install Duality
