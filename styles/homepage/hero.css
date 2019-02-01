@@ -1,0 +1,25 @@
+#heroArea .left {
+    float: left;
+    width: 40%;
+    height: 650px;
+    padding: 10% 10%;
+    background-color: lightblue;
+}
+
+#heroArea .right {
+    float: right;
+    width: 60%;
+    height: 650px;
+    background-image: url("../../img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#heroArea .description {
+    font-size: 1.3em;
+}
+
+#heroArea button {
+    padding: 6%;
+    font-size: 1.2em;
+}

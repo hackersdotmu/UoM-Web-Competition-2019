@@ -1,0 +1,46 @@
+nav .ui.container {
+    width: 85%;
+    position: relative;
+}
+
+#subLogo {
+    color: #29c32f;
+    font-style: italic;
+}
+
+.ui.menu:first-child {
+    padding: 9px;
+    margin-bottom: 0;
+}
+
+.ui.menu .logo {
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+
+.ui.menu .ui.icon.input {
+    left: 20%;
+    width: 32%;
+}
+
+form.ui.icon.input input {
+    border: 1px solid rgba(34, 36, 38, 0.25);
+    border-radius: 1px;
+}
+
+.nav-btn {
+    position: absolute;
+    right: 0;
+}
+
+.ui.button.primary {
+    background-color: #29c32f !important;
+}
+
+nav .ui.menu i.search.icon {
+    color: #29c32f;
+}
+
+nav .ui.menu .ui.icon.input {
+    margin-bottom: 0 !important;
+}

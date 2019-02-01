@@ -1,0 +1,30 @@
+footer {
+    width: 100%;
+    /* bottom: 0; */
+    padding: 35px;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 10%;
+}
+
+footer ul {
+    display: inline;
+}
+
+#copyright {
+    display: inline;
+    margin-left: 10%;
+}
+
+footer {
+    border-bottom: 5px solid #29c32f;
+    border-top: 2px solid #a1a7b342;
+}
+
+#conditions {
+    position: absolute;
+    right: 0;
+}

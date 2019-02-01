@@ -1,0 +1,26 @@
+#statsArea {
+    height: 650px;
+}
+
+#statsArea .left {
+    float: left;
+    width: 65%;
+    height: 100%;
+    padding: 8% 10%;
+}
+
+#statsArea .right {
+    float: right;
+    width: 35%;
+    height: 100%;
+    padding: 12% 10%;
+    background-color: lightblue;
+}
+
+#statsArea .right .title {
+    margin-bottom: 15%;
+}
+
+#statsArea .right .counters {
+    font-size: 4.5em;
+}
