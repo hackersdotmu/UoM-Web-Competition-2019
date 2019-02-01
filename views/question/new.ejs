@@ -1,0 +1,65 @@
+<% include ../Partials/header %>
+    <br>
+    <br>
+    <div class="container height-full">
+        <% if (typeof error !== 'undefined') { %>
+
+            <div role="alert" class="alert alert-danger">
+                <%= error %>
+            </div>
+            <% } %>
+
+                <div class="paper-card col-lg-10 col-md-12 mx-md-auto">
+                    <h4>New Question</h4>
+                    <br>
+                    <form action="/question/new" method="post">
+                        <div class="row form-group">
+                            <label class="col-md-3 col-sm-4" for="title">
+                    <h6>Title</h6>
+                </label>
+                            <input class="col-md-9 col-sm-8" type="text" id="title" name="title" placeholder="How to open an issue?">
+                        </div>
+                        <div class="row form-group">
+                            <!-- TODO: Show modal to help with MD syntax -->
+                            <label class="col-md-3 col-sm-4" for="content">
+                    <h6>Content
+                        <a href="https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax" target="_blank">
+                            <i class="material-icons alignicons">
+                                help
+                            </i>
+                        </a>
+                    </h6>
+                </label>
+                            <textarea class="col-md-9 col-sm-8" type="text" rows="10" id="content" name="content" placeholder="First enter an accurate title for your question. Then Enter the question content here making sure to describe your problem or scenario properly. Last you will have to enter your tags and that is the most important part since tags cannnot be edted after opening an issue. tags are used to notify people according to their groups, interests or fields."></textarea>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-md-3 col-sm-4" for="tags">
+                    <h6>Tags <span class="small">comma separated</span> </h6>
+                </label>
+                            <input class="col-md-9 col-sm-8" type="text" id="tags" name="tags" placeholder="Enter tags here. Ex: students,technology">
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="<%=captcha%>"></div>
+                        <button class="btn" style="display:block; margin: auto">Submit <i class="material-icons alignicons">send</i></button>
+                    </form>
+                </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#reg-form').submit(function() {
+                $(this).ajaxSubmit({
+                    error: function(xhr) {
+                        status('Error: ' + xhr.status);
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+                });
+                //Very important line, it disable the page refresh.
+                return false;
+            });
+        });
+    </script>
+
+    <% include ../Partials/footer %>

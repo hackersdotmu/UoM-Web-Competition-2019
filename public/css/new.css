@@ -1,0 +1,93 @@
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.fill img {
+    border-radius: 50%;
+}
+
+.fill2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fill2 img {
+    width: auto;
+    height: auto;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 45%;
+    height: auto;
+    border: solid grey 2px;
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(http://localhost/icons/MaterialIcons-Regular.eot);
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://localhost/icons/MaterialIcons-Regular.woff2) format('woff2'), url(http://localhost/icons/MaterialIcons-Regular.woff) format('woff'), url(http://localhost/icons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20spx;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    // Support for all WebKit browsers. 
+    //-webkit-font-smoothing: antialiased;
+    // Support for Safari and Chrome. 
+    text-rendering: optimizeLegibility;
+    // Support for Firefox. 
+    //-moz-osx-font-smoothing: grayscale;
+    Support for IE. font-feature-settings: 'liga';
+}
+
+.material-icons.title {
+    font-size: 18px;
+}
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f8fa;
+    z-index: 9998;
+    text-align: center
+}
+
+.plane-container {
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.padding-bottom-3 {
+    padding-bottom: 3px;
+}
+
+.alignicons {
+    vertical-align: middle;
+    padding-bottom: 3px;
+}

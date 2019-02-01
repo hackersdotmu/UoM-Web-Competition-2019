@@ -1,0 +1,178 @@
+<% include ../Partials/header %>
+
+    <div class="page light">
+        <div class="container height-full">
+            <br>
+            <br>
+            <% if(session.user.uname == question.user && question.notify==true) { %>
+                <form action="/question/markread/<%= question._id %>" method="POST">
+                    <div align='right'>
+                        <button type="submit" class="btn btn-warning">Mark as read</button>
+
+                    </div>
+                </form>
+                <br>
+                <% } %>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <%= question.title %>
+                                    <span style="padding-left:10px">
+                        <% question.tags.forEach((tag)=>{ %>
+                        <span class="btn btn-outline-secondary" style="font-size:12px">
+                            <%= tag %></span>
+                                    <% }) %>
+                                        </span>
+                            </h3>
+                            <h6 class="sub-title">Votes:
+                                <%= question.votes.length %>
+                                    <% if(question.user != session.user.uname) { %>
+                                        <span class="float-right">
+
+                        <form action="/question/vote/<%= question._id %>" method="POST">
+                            <% if(question.voted == true) { %>
+                            <button type="submit" class="btn disabled" disabled>
+                                <% } else { %>
+                                <button type="submit" class="btn btn-outline-primary float-right">
+                                    <% } %>
+                                    Upvote
+                                    <!-- <i class="material-icons alignicons">
+                          thumb_up
+                        </i> -->
+                                </button>
+                        </form>
+                    </span>
+                                        <% } %>
+
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <%- question.content %>
+                        </div>
+                        <div class="card-footer">
+                            Asked by:
+                            <a href="#" class="card-link">
+                                <%= question.user %>
+                            </a> on
+                            <%= question.time %>.
+                                <% if(question.user != session.user.uname) { %>
+                                    <span class="float-right">
+                    <button href="#modalLogin" data-toggle="modal" data-target="#modalNewAnswer" type="button" class="btn btn-primary">
+                        Answer
+                    </button>
+                </span>
+                                    <% if(!question.contacts.includes(session.user.uname)) { %>
+                                        <form action="/question/contact/<%= question._id %>" method="POST">
+                                            <span class="float-right" style="padding-right: 15px">
+                        <button type="submit" class="btn btn-success">Share Contact</button>
+                    </span>
+                                        </form>
+                                        <% } %>
+
+                                            <span class="float-right" style="padding-right: 15px">
+                    <form action="/question/report/<%= question._id %>" method="POST">
+                        <% if(question.reported == true) { %>
+                        <button type="submit" class="btn disabled" disabled>
+                            <% } else { %>
+                            <button type="submit" class="btn btn-outline-danger float-right">
+                                <% } %>
+                                Report
+                                <!-- <i class="material-icons alignicons">
+                                                      thumb_up
+                                                    </i> -->
+                            </button>
+                    </form>
+                </span>
+                                            <% } else { %>
+                                                <span class="float-right">
+                    <button href="#modalEditQuestion" data-toggle="modal" data-target="#modalEditQuestion" type="button"
+                        class="btn btn-primary">
+                        Edit
+                    </button>
+                </span>
+                                                <% } %>
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <div>
+                        <div class="col-xl-12 align-self-end">
+                            <div class="comments">
+                                <ol class="comment-list">
+                                    <% question.replies.forEach((reply)=>{ %>
+                                        <li class="comment">
+                                            <a class="float-left" href="#"></a>
+                                            <div class="media-body description">
+                                                <p>
+                                                    <%= reply.answer %>
+                                                </p>
+                                            </div>
+                                            <ul class="comments-meta">
+                                                <li>
+                                                    <a class="url" rel="external nofollow" href="#">
+                                                        <%= reply.uname %>
+                                                    </a> on</li>
+                                                <li>
+                                                    <%= reply.time %>
+                                                </li>
+                                                <!-- <li class="reply"><a href="#" class="comment-reply-link" rel="nofollow">NumberOfVote
+                  <i class="material-icons alignicons">
+                    thumb_up
+                  </i>
+                </a></li> -->
+                                            </ul>
+                                        </li>
+                                        <% }) %>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% include addAnswer %>
+                        <% include editQuestion %>
+                            <% if(session.user.uname == question.user) { if(!question.contacts.length==0){ %>
+                                <section class="section service-blocks no-m white">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6 mx-lg-auto">
+                                                <header>
+                                                    <h2>Contacts</h2>
+                                                    <p>Here are people who shared their contact information</p>
+                                                </header>
+                                            </div>
+                                        </div>
+                                        <div class="p-t-b-40">
+                                            <div class="lightSlider" data-item="3" data-item-md="2" data-item-sm="1" data-auto="true" data-loop="true">
+                                                <% for(contact in question.contact_details){ %>
+                                                    <div>
+                                                        <div class="service-block center paper-block" style='background: transparent'>
+                                                            <div class="service-icon" align='center'><i class="material-icons alignicons">account_circle</i></div>
+                                                            <div class="service-content">
+                                                                <h3>
+                                                                    <a href="#">
+                                                                        <%=question.contact_details[contact].first_name %>
+                                                                            <%=question.contact_details[contact].last_name %>
+                                                                    </a>
+                                                                </h3>
+                                                                <p> Email:
+                                                                    <%=question.contact_details[contact].email %><br>Phone:
+                                                                        <%=question.contact_details[contact].phone %>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <% }} %>
+                                    <br><br>
+
+        </div>
+    </div>
+
+
+    <% include ../Partials/footer %>

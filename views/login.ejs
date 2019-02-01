@@ -1,0 +1,138 @@
+<% include Partials/header %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+    <main>
+        <div id="primary" class="blue4 p-t-b-100 height-full responsive-phone">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6"> <img src="/img/map.png" alt=""></div>
+                    <div class="col-lg-6 p-t-100">
+                        <% if (message!=""){ %>
+                            <div class="col-lg-10 ">
+                                <%if (message.type=='Success'){ %>
+                                    <div role="alert" class="alert alert-success">
+                                        <% }else{ %>
+                                            <div role="alert" class="alert alert-danger">
+                                                <% } %>
+                                                    <font color='white'>
+                                                        <%= message.msg %>
+                                                    </font>
+                                            </div>
+                                    </div>
+                                    <% } %>
+                                        <div class="text-white">
+                                            <h1>Welcome Back</h1>
+                                            <p class="s-18 p-t-b-20 font-weight-lighter">Hey there, signin now to check out the latest questions!
+                                            </p>
+                                        </div>
+                                        <form name="signin" action="/login/auth" method="post">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group has-icon"><i class="material-icons">account_circle</i><input type="text" style="color:#fff;" class="login-control form-control-lg" name="un" placeholder="Username" required></div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group has-icon"><i class="material-icons alignicons">lock_open</i>
+                                                        <input type="password" style="color:#fff;" class="login-control form-control-lg" name="pw" placeholder="Password" required></div>
+                                                </div>
+
+                                            </div>
+                                            <br><br>
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <a class="btn btn-danger btn-lg btn-block" data-toggle="modal" href="#register" style="margin-bottom: 10px">Register</a>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign In">
+                                                </div>
+                                            </div>
+                                        </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content no-r "><a href="#" data-dismiss="modal" aria-label="Close" class="paper-nav-toggle active"><i></i></a>
+                        <div class="modal-body no-p">
+                            <div class="row">
+                                <div class="col-lg-5 grid">
+                                    <div align="center"><img src="/img/r1.gif" style="vertical-align: middle;border-radius: 50%;margin: 0px 15x" alt=""></div>
+                                    <div class="p-40">
+                                        <h5 class="p-t-40">Sign up at Duality</h5>
+                                        <p>Please input your details in order to proceed.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+
+                                    <div class="light p-t-b-40">
+                                        <div class="p-40">
+                                            <form name="registration" action="login/register" method="post">
+                                                <div class="form-group"> <input type="text" class="form-control form-control-lg" placeholder="User Name" name="uname" minlength="4" maxlength="10" onkeypress="return check_input(event)" required></div>
+                                                <div class="form-group"><input type="password" class="form-control form-control-lg" placeholder="Password" name="pw" minlength="4" maxlength="25" required></div>
+                                                <div class="form-group"> <input type="text" class="form-control form-control-lg" placeholder="First Name" name="first_name" required></div>
+                                                <div class="form-group"> <input type="text" class="form-control form-control-lg" placeholder="Last Name" name="last_name" required></div>
+                                                <div class="form-group"> <input type="email" class="form-control form-control-lg" placeholder="Email" name="email" required></div>
+                                                <div class="form-group"> <input type="tel" class="form-control form-control-lg" placeholder="Phone Number" name="phone" required></div>
+                                                <!--Alert-->
+                                                <div role="alert" class="alert alert-warning"><strong>Note</strong> Use Comma( , ) to separate the courses and interests below. Example: Engineering, Science, Technology
+                                                </div>
+                                                <div class="form-group"> <input type="text" class="form-control form-control-lg" placeholder="Courses followed" name="courses" maxlength="300" required></div>
+                                                <div class="form-group"> <input type="text" class="form-control form-control-lg" placeholder="Research Interests" name="interests" maxlength="300" required></div>
+
+                                                <div><select class="form-control" name="field" required>
+                                                    <option value="Agriculture" selected>Agriculture</option>
+                                                    <option value="Engineering">Engineering</option>
+                                                    <option value="Law">Law</option>
+                                                    <option value="Management">Management</option>
+                                                    <option value="Science">Science</option>
+                                                    <option value="Social-Sciences">Social-Sciences</option>
+                                                    <option value="Technology">Technology</option>
+
+                                                </select><br></div>
+
+                                                <br>
+                                                <div><select class="form-control" name="experience">
+                                                    <option value="student" selected>I am a
+                                                        student</option>
+                                                    <option value="ex_student">I am an ex-student</option>
+                                                    <option value="employed">I am employed</option>
+                                                </select><br></div>
+                                                <br>
+                                                <div class="g-recaptcha" data-sitekey="<%=captcha%>"></div>
+                                                <br>
+                                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign Up Now">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script>
+        function check_input(e) {
+            var k;
+            document.all ? k = e.keyCode : k = e.which;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+        }
+        $(document).ready(function() {
+            $('#reg-form').submit(function() {
+                $(this).ajaxSubmit({
+                    error: function(xhr) {
+                        status('Error: ' + xhr.status);
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+                });
+                //Very important line, it disable the page refresh.
+                return false;
+            });
+        });
+    </script>
+
+    <% include Partials/footer %>

@@ -1,0 +1,64 @@
+<% include Partials/header %>
+    <div class='page light height-full'>
+        <br><br><br>
+        <div class='container-fluid'>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+            <div class="row">
+                <div class="col-sm-6">
+                    <canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+                </div>
+                <div class="col-sm-6">
+                    <canvas id="pie-chart" width="800" height="450"></canvas>
+                </div>
+            </div>
+        </div>
+        <script>
+            Chart.defaults.global.defaultFontColor = "#000000";
+            new Chart(document.getElementById("pie-chart"), {
+                type: 'pie',
+                data: {
+                    labels: ['Agriculture', 'Engineering', 'Law', 'Management', 'Science', 'Social-Sciences',
+                        'Technology'
+                    ],
+                    datasets: [{
+                        label: "Fields",
+                        backgroundColor: ['#c7b218',
+                            '#aa0f48', '#9e83d3', '#cb4f29', '#86b952', '#2895ab', '#3e2f05'
+                        ],
+                        data: <%=fields_percent%>,
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Percentage per field category'
+                    }
+                }
+            });
+            new Chart(document.getElementById("bar-chart-horizontal"), {
+                type: 'horizontalBar',
+                data: {
+                    labels: ['Agriculture', 'Engineering', 'Law', 'Management', 'Science', 'Social-Sciences',
+                        'Technology'
+                    ],
+                    datasets: [{
+                        label: "Fields in mauritius",
+                        backgroundColor: ['#c7b218',
+                            '#aa0f48', '#9e83d3', '#cb4f29', '#86b952', '#2895ab', '#3e2f05'
+                        ],
+                        data: <%=fields%>,
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Number of people per interest'
+                    }
+                }
+            });
+        </script>
+    </div>
+    <% include Partials/footer %>

@@ -1,0 +1,123 @@
+<% include Partials/header %>
+    <main>
+        <div id="primary" class="p-t-b-20 height-full">
+            <div class="container">
+                <br>
+                <br>
+
+                <% if (message!=""){ %>
+                    <div class="col-lg-5 mx-md-auto">
+                        <%if (message.type=='Success'){ %>
+                            <div role="alert" class="alert alert-success">
+                                <% }else{ %>
+                                    <div role="alert" class="alert alert-danger">
+                                        <% } %>
+                                            <%= message.msg %>
+                                    </div>
+                            </div>
+                            <% } %>
+                                <div class="row">
+                                    <div class="col-lg-4 mx-md-auto">
+                                        <div class="text-center"> <img src="/img/dummy.png" alt=""><br>
+                                            <h2>Welcome Back</h2>
+                                            <p class="p-t-b-20">Update your account</p>
+                                            <% if(session.user.verified == false) { %>
+                                                <div role="alert" class="alert alert-danger">
+                                                    Verify your account for a complete Experience.
+                                                    <a href="/login/verify/<%= session.user.token%>">verify</a>
+                                                </div>
+                                                <% } %>
+                                        </div>
+                                        <form name="signin" action="/account/update" method="post">
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">account_box</i>
+                                                <input type="text" class="form-control form-control-lg" placeholder="<%=session.user.uname %>" name="un" readonly></div>
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">face</i> <input type="text" class="form-control form-control-lg" placeholder="<%=session.user.first_name %>" name="first_name" value="<%=session.user.first_name %>" required></div>
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">account_circle</i>
+                                                <input type="text" class="form-control form-control-lg" placeholder="<%=session.user.last_name%>" value="<%=session.user.last_name %>" name="last_name" required></div>
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">mail</i> <input type="email" class="form-control form-control-lg" placeholder="<%=session.user.email%>" value="<%=session.user.email %>" name="email" required></div>
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">phone</i> <input type="tel" class="form-control form-control-lg" placeholder="<%=session.user.phone %>" name="phone" value="<%=session.user.phone %>" required></div>
+
+                                            <!--Alert-->
+                                            <div role="alert" class="alert alert-warning"><strong>Note</strong> Use Comma( , ) to separate the courses and interests below. Example: Engineering, Science, Technology
+                                            </div>
+
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">class</i> <input type="text" class="form-control form-control-lg" placeholder="Finished Courses" name="courses" value="<%=session.user.courses %>" maxlength="300" required></div>
+                                            <div class="form-group has-icon"><i class="material-icons alignicons">favorite_border</i>
+                                                <input type="text" class="form-control form-control-lg" placeholder="Academic and research interests" name="interests" value="<%= session.user.interests %>" maxlength="300" required></div>
+
+
+                                            <br>
+                                            <div><select class="form-control" name="field" required>
+                                    <option value="<%=session.user.field%>" selected>
+                                        <%=session.user.field%>
+                                    </option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Management">Management</option>
+                                    <option value="Science">Science</option>
+                                    <option value="Social-Sciences">Social-Sciences</option>
+                                    <option value="Technology">Technology</option>
+
+                                </select><br></div>
+                                            <br>
+                                            <div><select class="form-control" name="experience" required>
+                                    <option value="<%=session.user.experience%>" selected>
+                                        <%=session.user.experience%>
+                                    </option>
+                                    <option value="student">I am a student</option>
+                                    <option value="ex_student">I am an ex-student</option>
+                                    <option value="employed">I am employed</option>
+                                </select><br></div>
+                                            <div class=" row ">
+                                                <div class="col-lg-7 ">
+                                                    <a class="btn btn-success btn-lg btn-block" data-toggle="modal" href="#resetpw" style='margin-bottom:10px'>Change
+                                        Password</a>
+                                                </div>
+                                                <div class="col-lg-5 ">
+                                                    <input type="submit" class="btn btn-primary btn-lg btn-block " value="Update">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class='row'>
+                                                <div class="col-lg-12">
+                                                    <a href='/' class="btn btn-warning btn-lg btn-block">Go to Portal</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                    </div>
+            </div>
+            <!-- #primary -->
+    </main>
+
+    <div class="modal fade" id="resetpw" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog width-400" role="document">
+            <div class="modal-content no-r"><a href="#" data-dismiss="modal" aria-label="Close" class="paper-nav-toggle active"><i></i></a>
+                <div class="modal-body no-p">
+                    <div class="text-center p-40 p-b-0"> <img src="/img/pw.png" alt="">
+                        <h2>Password Change</h2>
+                        <p class="p-t-b-20 ">Input your current password as well as your new password.</p>
+                    </div>
+                    <div class="light p-40 b-t-b">
+                        <form action="/account/updatepw" method="post">
+                            <div class="form-group has-icon"><i class="material-icons alignicons">lock_open</i>
+                                <input type="password " class="form-control form-control-lg" placeholder="Current Password" name='pw' required>
+                            </div>
+                            <div class="form-group has-icon"><i class="material-icons alignicons">lock_open</i>
+                                <input type="password" class="form-control form-control-lg" placeholder="New Password" name='new_pw' required>
+                            </div>
+                            <input formaction="/account/updatepw" class="btn btn-danger btn-lg btn-block" type="Submit" value="Change Password">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <% include Partials/footer %>

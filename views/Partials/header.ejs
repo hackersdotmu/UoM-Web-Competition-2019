@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Duality" content="Duality is a resource sharing website aimed for academic purposes.">
+    <meta name="author" content="Duality Team">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Duality" />
+    <meta property="og:description" content="Duality is a resource sharing website aimed for academic purposes." />
+
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>Webcup</title>
+
+    <link rel='stylesheet' href='/css/new.css' />
+    <link rel='stylesheet' href='/css/app.css' />
+    <link rel="stylesheet" href="/icons//material-icons.css">
+
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f5f8fa;
+            z-index: 9998;
+            text-align: center
+        }
+        
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%
+        }
+    </style>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+    <div id="loader" class="loader loader-fade">
+        <div class="plane-container">
+            <img src="/img/loading.svg"></div>
+    </div>
+    <div class="pos-f-t">
+        <!-- Search bar reactive-->
+        <div class="collapse" id="searchbar">
+            <div class="bg-dark p-4">
+                <div class="search-bar">
+                    <form action='/' method='get'><input class="transparent s-24 text-white b-0 font-weight-lighter w-100 height-50" type="text" placeholder="start typing..." name='search'><input type="submit" style="display: none;"></form>
+                </div><a href="#" data-toggle="collapse" data-target="#searchbar" aria-expanded="false" aria-label="Toggle navigation" class="paper-nav-toggle paper-nav-white active"><i></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-absolute nav-border nav-light nav-slim sticky">
+        <nav class=" mainnav navbar navbar-default justify-content-between nav-inverse nav-flat ">
+            <div class=" container-fluid relative "><a class=" offcanvas dl-trigger paper-nav-toggle " type=" button " data-toggle=" offcanvas " aria-controls=" navbarNav " aria-expanded=" false " aria-label=" Toggle navigation "><i></i></a>
+                <a class=" navbar-brand " href="/" style="color:white">
+                    <i class="material-icons">star_half</i> DUALITY
+                </a>
+                <div class="paper_menu">
+                    <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+                        <ul class="dl-menu align-items-center">
+                            <li> <a href="/">Home</a></li>
+                            <li> <a href="/about">About</a></li>
+                            <li> <a href="/contact">Contact Us</a></li>
+                            <li>
+                                <a href="#search" class="" data-toggle="collapse" data-target="#searchbar" aria-controls="navbarToggleExternalContent" aria-expanded="false">Search</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-item nav-link mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="material-icons title alignicons">account_circle</i>
+                                    <% if (session.user){ %>
+                                        <%=session.user.uname %> <i class="material-icons title alignicons">keyboard_arrow_down</i>
+                                            <% }else{ %> Login
+                                                <% } %>
+                                </a>
+                                <% if (session.user){ %>
+                                    <div class="dropdown-menu dropdown-menu-right b-0 shadow1"><a class="dropdown-item" href="/"><i class="material-icons title alignicons">dashboard</i>My
+                                        Dashboard</a><a class="dropdown-item" href="/account"><i class="material-icons title alignicons">settings</i>Account
+                                        Settings</a>
+                                        <% if (session.user.admin==true){ %>
+                                            <a class="dropdown-item" href="/adminpanel">
+                                                <i class="material-icons title alignicons">settings_applications</i>Admin Panel</a>
+                                            <% } %>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="/login/logout">
+                                                    <i class="material-icons title alignicons">clear</i>Logout</a>
+                                    </div>
+                                    <% }else{ %>
+                                        <div class="dropdown-menu dropdown-menu-right b-0 shadow1">
+                                            <a class="dropdown-item" href="/login">
+                                                <i class="material-icons title alignicons">trending_flat</i>Login</a>
+                                        </div>
+                                        <% } %>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
