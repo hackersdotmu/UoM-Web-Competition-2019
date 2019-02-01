@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCupRevised_Final_2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Community-ChatComments.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Contact-Us.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/feed_profile-1.css">
+    <link rel="stylesheet" href="assets/css/feed_profile.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-1.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Header--Menu--Sections.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="/*background-color:#ffffff;*/font-family:'Merriweather Sans', sans-serif;background-image:url(&quot;assets/img/leaves.png&quot;);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color:#333333;">MO LAVENIR</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="feed.html" style="color:#40514e;">Feed</a></li>
+                </ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"><i class="fa fa-search" style="color:#40514e;"></i></label><input class="form-control search-field" type="search" name="search" placeholder="search" id="search-field" style="color:#40514e;background-color:rgba(17,153,158,0);margin:4px;padding:0;"></div>
+                </form>
+        </div>
+        </div>
+    </nav>
+    <div data-bs-parallax-bg="true" style="height:100%;margin-bottom:50px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;position:relative;z-index:1;background-size:cover;">
+        <div class="container profile profile-view" id="profile" style="background-color:rgba(228,249,245,0.54);">
+            <div class="row">
+                <div class="col-md-12 alert-col relative">
+                    <div class="alert alert-info absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
+                </div>
+            </div>
+            <form action="profile.php">
+                <div class="form-row profile-row">
+                    <div class="col-md-4 relative">
+                        <div class="avatar">
+                            <div class="avatar-bg center" style="color:#e4f9f5;margin-bottom:10px;"></div>
+                        </div><input type="file" class="form-control" name="avatar-file" style="background-color:#ffffff;color:#40514e;"></div>
+                    <div class="col-md-8">
+                        <h1 style="color:#40514e;">Profile </h1>
+                        <hr>
+                        <div class="form-row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><label style="color:#40514e;font-size:20px;">Firstname </label><input class="form-control" type="text" required="" placeholder="e.g John" maxlength="30" minlength="2" name="firstname" style="background-color:#ffffff;"></div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><label style="color:#40514e;font-size:20px;">Lastname </label><input class="form-control" type="text" required="" placeholder="e.g Smith" maxlength="30" minlength="2" name="lastname" style="color:#40514e;"></div>
+                            </div>
+                        </div>
+                        <div class="form-group"><label style="color:#40514e;font-size:20px;">Course(s) completed</label>
+<select name="courses">
+<option value="">Select Any One</option>
+<option value="Computer & Technology">Computer & Technology</option>
+<option value="Education & Social Services">Education & Social Services</option>
+<option value="Science">Science</option>
+<option value="Health care">Health care</option>
+<option value="Trades & Transportation">Trades & Transportation</option>
+<option value="Design & Architecture">Design & Architecture</option>
+<option value="Finance">Finance</option>
+<option value="Business and Management">Business and Management</option>
+<option value="Art & Communications">Art & Communications</option>
+
+</select></div>
+                        <div class="form-row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><label style="color:#40514e;font-size:20px;">Address</label><input type="text" class="form-control" name="address" placeholder ="e.g Royal Road Port Louis, Mauritius"/></div>
+                                <div class="form-group"><label style="color:#40514e;font-size:20px;">Biography</label></div><textarea class="form-control" rows="5" name="biography" required="" placeholder="Write something about yourself. (Max Characters: 200)" maxlength="200"
+                                    minlength="30"></textarea></div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><label style="color:#40514e;font-size:20px;">Email address</label><input type="email" class="form-control" name="email" placeholder="e.g name@email.com" /></div><label class="col-form-label" style="color:#40514e;font-size:20px;">Skills</label><input type="text" class="form-control" name="email" placeholder="e.g HTML, CSS, C++" /></div>
+                        </div>
+                        <hr>
+                        <div class="form-row">
+                            <div class="col-md-12 content-right"><button class="btn btn-danger form-btn" type="reset" style="background-color:#11999e;color:#ffffff;">CANCEL </button><button class="btn btn-primary form-btn" type="submit" style="background-color:#11999e;color:#e4f9f5;">SAVE </button></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color:#40514e;color:#e4f9f5;">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="feed.html">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Mo Lavenir © 2019</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>

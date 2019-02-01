@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCupRevised_Final_2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Community-ChatComments.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Contact-Us.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/feed_profile-1.css">
+    <link rel="stylesheet" href="assets/css/feed_profile.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-1.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Header--Menu--Sections.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color:#e4f9f5;background-image:url(&quot;assets/img/doodles.png&quot;);"><nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="height:53px;font-family:&#39;Merriweather Sans&#39;, sans-serif;">
+    <div class="container"><a href="index.html" class="navbar-brand" style="color:#333333;">MO LAVENIR</a><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+                <li role="presentation" class="nav-item"><a href="feed.html" class="nav-link active" style="color:#333333;">Feed</a></li>
+            </ul>
+            <form target="_self" class="form-inline mr-auto">
+                <div class="form-group"><label for="search-field"><i class="fa fa-search" style="color:#333333;"></i></label><input type="search" name="search" placeholder="search" class="form-control search-field" id="search-field" style="background-color:#ffffff;padding:0px;margin-top:0px;margin-left:6px;"
+                    /></div>
+            </form><h1 class="UserDisplay" style="  font-size:20px;
+  color:#11999e;
+">Hi, <?php   
+session_start();
+echo  $_SESSION['email'];
+?></h1><a class="btn btn-light action-button" role="button" href="profile.html" style="background-color:#30e3ca;color:#e4f9f5;margin:-30;font-family:&#39;Merriweather Sans&#39;, sans-serif;padding:7px;font-size:15px;">EDIT PROFILE</a><a class="btn btn-light action-button"
+                role="button" href="logout.php" style="background-color:#30e3ca;color:#e4f9f5;margin:30;font-family:&#39;Merriweather Sans&#39;, sans-serif;padding:7px;font-size:15px;">LOG OUT</a><a class="btn btn-light action-button"
+                role="button" href="logout.php" style="background-color:#30e3ca;color:#e4f9f5;margin:30;font-family:&#39;Merriweather Sans&#39;, sans-serif;padding:7px;font-size:15px;">QUERY</a></div>
+    </div>
+</nav>
+    <div class="container-fluid main" style="background-color:rgba(222,222,222,0);">
+        <div class="jumbotron" style="background-color:#ffffff;">
+            <div class="btn-toolbar">
+                <div class="btn-group" role="group"></div>
+            </div>
+            <div class="media"><img class="d-inline mr-3" src="https://odesk-prod-portraits.s3.amazonaws.com/Users:cosanostracr:PortraitUrl_100?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&amp;Expires=2147483647&amp;Signature=1UWa0mcPig3fR%2FR8w9%2BfpwTU%2BAI%3D&amp;1548752477767">
+                <div
+                    class="media-body">
+                    <div class="dropdown d-inline-flex"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:rgba(17,153,158,0);color:#11999e;border-color:white;"></button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                            role="menu"><a class="dropdown-item d-inline" role="presentation" href="#">Upvote</a><a class="dropdown-item" role="presentation" href="#">Report</a></div>
+                    </div>
+                    <h5 class="d-inline" style="color:#11999e;font-family:Montserrat, sans-serif;">Gracjan W.<br></h5>
+                    <div class="btn-group btn-group-sm d-flex flex-wrap d-sm-inline-flex" role="group"><button class="btn btn-outline-primary d-inline-flex" type="button" style="background-color:rgba(64,81,78,0);color:#40514e;border-color:#40514e;margin:2px 2px;">HTML</button><button class="btn btn-outline-primary" type="button" style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);argin:2px 2px;">CSS</button>
+                        <button
+                            class="btn btn-outline-primary d-inline-flex" type="button" style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);margin:2px 2px;">C++</button>
+                    </div>
+                    <p style="font-family:Montserrat, sans-serif;font-size:15px;"><strong>Course Completed: </strong><em>Web Design</em><br></p>
+                    <p style="font-family:Montserrat, sans-serif;">I am the Creative Director of a creative multidisciplinary agency based in Mauritius with a young team full of fresh ideas that are always open to innovation and collaboration. We are a diverse team driven by a passion for design and
+                        commitment to our work.<br><br>As a team we developing, designing and realizing creative concepts people can use, which will leave a lasting impression and are simple, clear and to the point.&nbsp;<br></p>
+            </div>
+        </div><small class="text-muted">Last Online:&nbsp;Dec 1, 2018<br><br></small>
+        <p><a class="btn btn-primary" role="button" href="#" data-bs-hover-animate="pulse" style="background-color:#11999e;font-family:Montserrat, sans-serif;">I'm Interested</a></p>
+    </div>
+    </div>
+    <div class="container-fluid main" style="background-color:rgba(222,222,222,0);">
+        <div class="jumbotron" style="background-color:#ffffff;">
+            <div class="btn-toolbar">
+                <div class="btn-group" role="group"></div>
+            </div>
+            <div class="media"><img class="d-inline mr-3" src="https://odesk-prod-portraits.s3.amazonaws.com/Users:jjaro:PortraitUrl_100?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&amp;Expires=2147483647&amp;Signature=fEZEf3R%2F2GypQm95dvoZSxm55oU%3D&amp;1548755909563">
+                <div class="media-body">
+                    <div class="dropdown d-inline-flex"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:rgba(17,153,158,0);color:#11999e;border-color:white;"></button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                            role="menu"><a class="dropdown-item d-inline" role="presentation" href="#">Upvote</a><a class="dropdown-item" role="presentation" href="#">Report</a></div>
+                    </div>
+                    <h5 class="d-inline" style="color:#11999e;font-family:Montserrat, sans-serif;">Jay.j<br></h5>
+                    <div class="btn-group btn-group-sm d-flex flex-wrap d-sm-inline-flex" role="group"><button class="btn btn-outline-primary d-inline-flex" type="button" style="background-color:rgba(64,81,78,0);color:#40514e;border-color:#40514e;margin:2px 2px;">Photoshop CC</button><button class="btn btn-outline-primary" type="button"
+                            style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);argin:2px 2px;">C++</button><button class="btn btn-outline-primary d-inline-flex" type="button" style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);margin:2px 2px;">Bootstrap 4</button></div>
+                    <p
+                        style="font-family:Montserrat, sans-serif;font-size:15px;"><strong>Course Completed: </strong><em>Graphic Designer</em><br></p>
+                        <p style="font-family:Montserrat, sans-serif;">With 20 years of experience in web and graphic designs based in Mauritius. I created many design solutions that have high visual impact. I develop creative ideas and concepts, choosing the appropriate media and style to meet the
+                            client's objectives. <br></p>
+                </div>
+            </div><small class="text-muted">Last Online: Dec 6, 2018</small>
+            <p><a class="btn btn-primary" role="button" href="#" data-bs-hover-animate="pulse" style="background-color:#11999e;font-family:Montserrat, sans-serif;">I'm Interested</a></p>
+        </div>
+    </div>
+    <div class="container-fluid main" style="background-color:rgba(222,222,222,0);">
+        <div class="jumbotron" style="background-color:#ffffff;">
+            <div class="btn-toolbar">
+                <div class="btn-group" role="group"></div>
+            </div>
+            <div class="media"><img class="d-inline mr-3" src="https://odesk-prod-portraits.s3.amazonaws.com/Users:tgstudio:PortraitUrl_100?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&amp;Expires=2147483647&amp;Signature=RlBeumbcj4dYRln8xLWEoVS7PS0%3D">
+                <div class="media-body">
+                    <div class="dropdown d-inline-flex"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:rgba(17,153,158,0);color:#11999e;border-color:white;"></button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                            role="menu"><a class="dropdown-item d-inline" role="presentation" href="#">Upvote</a><a class="dropdown-item" role="presentation" href="#">Report</a></div>
+                    </div>
+                    <h5 class="d-inline" style="color:#11999e;font-family:Montserrat, sans-serif;">Zarine C.<br></h5>
+                    <div class="btn-group btn-group-sm d-flex flex-wrap d-sm-inline-flex" role="group"><button class="btn btn-outline-primary d-inline-flex" type="button" style="background-color:rgba(64,81,78,0);color:#40514e;border-color:#40514e;margin:2px 2px;">Accountant</button><button class="btn btn-outline-primary" type="button"
+                            style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);argin:2px 2px;">Resource Management</button><button class="btn btn-outline-primary" type="button" style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);argin:2px 2px;">Social Media</button></div>
+                    <p
+                        style="font-family:Montserrat, sans-serif;font-size:15px;"><strong>Course Completed: </strong><em>BSc Accounting</em><br></p>
+                        <p style="font-family:Montserrat, sans-serif;">I am a native English-speaker with key skills in translation (German, creol and Italian to English) and proof-reading. I am a qualified chartered accountant, and I have 12 years' experience in preparing and proof-reading financial
+                            statements and reports. I also have professional experience translating Italian internal audit reports into English, and translating/ proofreading German audit reports to management. <br><br></p>
+                </div>
+            </div><small class="text-muted">Last Online: Feb 6, 2019</small>
+            <p><a class="btn btn-primary" role="button" href="#" data-bs-hover-animate="pulse" style="background-color:#11999e;font-family:Montserrat, sans-serif;">I'm Interested</a></p>
+        </div>
+        <div class="jumbotron" style="background-color:#ffffff;">
+            <div class="btn-toolbar">
+                <div class="btn-group" role="group"></div>
+            </div>
+            <div class="media"><img class="img-fluid d-inline mr-3" src="https://odesk-prod-portraits.s3.amazonaws.com/Users:carpsorin:PortraitUrl_100?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&amp;Expires=2147483647&amp;Signature=ySDvZc9i2DIH5L40PnlB%2BHq1w3g%3D">
+                <div class="media-body">
+                    <div class="dropdown d-inline-flex"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color:rgba(17,153,158,0);color:#11999e;border-color:white;"></button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                            role="menu"><a class="dropdown-item d-inline" role="presentation" href="#">Upvote</a><a class="dropdown-item" role="presentation" href="#">Report</a></div>
+                    </div>
+                    <h5 class="d-inline" style="color:#11999e;font-family:Montserrat, sans-serif;">Sorin C.<br></h5>
+                    <div class="btn-group btn-group-sm d-flex flex-wrap d-sm-inline-flex" role="group"><button class="btn btn-outline-primary d-inline-flex" type="button" style="background-color:rgba(64,81,78,0);color:#40514e;border-color:#40514e;margin:2px 2px;">Senior UI Developer</button><button class="btn btn-outline-primary" type="button"
+                            style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);argin:2px 2px;">SQL</button><button class="btn btn-outline-primary" type="button" style="color:#40514e;border-color:#40514e;background-color:rgba(255,255,255,0);argin:2px 2px;">iOS</button></div>
+                    <p
+                        style="font-family:Montserrat, sans-serif;font-size:15px;"><strong>Course Completed: </strong><em>Software Engineering</em><br></p>
+                        <p style="font-family:Montserrat, sans-serif;">10+ yrs of creative design, working for Coursera, Faber Castell, Skoda, GoGetFunding, oDesk, various agencies and 50+ startups. <br><br>I can guide your project through the entire design process: from analysis, to wireframes, to
+                            interactive prototypes and finally to user-friendly interfaces that are both beautiful and efficient. <br><br>I am friendly, easy-going and passionate about what I do, so if you are in need of UI or UX design help or just want
+                            to say "Hi", don't hesitate to contact me.<br></p>
+                </div>
+            </div><small class="text-muted">Last Online: Jan 6, 2019</small>
+            <p><a class="btn btn-primary" role="button" href="#" data-bs-hover-animate="pulse" style="background-color:#11999e;font-family:Montserrat, sans-serif;">I'm Interested</a></p>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color:#40514e;color:#e4f9f5;">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="feed.html">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Mo Lavenir © 2019</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>

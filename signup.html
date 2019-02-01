@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCupRevised_Final_2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Community-ChatComments.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Contact-Us.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/feed_profile-1.css">
+    <link rel="stylesheet" href="assets/css/feed_profile.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-1.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Header--Menu--Sections.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color:#e4f9f5;font-family:'Merriweather Sans', sans-serif;background-image:url(&quot;assets/img/leaves.png&quot;);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="height:53px;">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color:#40514e;">MO LAVENIR</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav"></ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"><i class="fa fa-search" style="color:#40514e;"></i></label><input class="form-control search-field" type="search" name="search" placeholder="search" id="search-field" style="color:#40514e;margin:4px;padding:0;"></div>
+                </form><a class="btn btn-light action-button" role="button" href="login.html" style="background-color:#11999e;color:#e4f9f5;">LOG IN</a></div>
+        </div>
+    </nav>
+    <div class="register-photo"><img class="bgimgsignup" src="assets/img/NewsletterSignup-Background.jpg" />
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form action="signup.php" method="post" style="background-color:rgba(64,81,78,0.49);color:#40514e;">
+                <h2 class="text-center" style="color:#e4f9f5;"><strong>Create</strong> an account.</h2>
+                <div class="form-group"><input class="form-control" type="email" name="email" required="" placeholder="Email" style="background-color:#e4f9f5;color:#40514e;"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" required="" placeholder="Password" style="background-color:#e4f9f5;color:#40514e;"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password-repeat" required="" placeholder="Password (repeat)" style="background-color:#e4f9f5;color:#40514e;"></div>
+                <div class="form-group">
+                    <div class="form-check"><label class="form-check-label" style="color:#e4f9f5;"><input class="form-check-input" type="checkbox" required="">I agree to the license terms.</label></div>
+                </div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color:#11999e;color:#e4f9f5;">Sign Up</button></div><a href="login.html" class="already" style="color:#e4f9f5;">You already have an account? Login Here.</a></form>
+        </div>
+        <div class="container profile profile-view" id="profile" style="background-color:rgba(228,249,245,0);">
+            <div class="row">
+                <div class="col-md-12 alert-col relative">
+                    <div class="alert alert-info absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color:#40514e;color:#e4f9f5;">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="feed.html">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Mo Lavenir © 2019</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>

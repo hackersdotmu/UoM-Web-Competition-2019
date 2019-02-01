@@ -1,0 +1,41 @@
+p {
+  margin-top:10px;
+}
+
+.dropdown.d-inline-flex {
+  border-color:transparent;
+  position:absolute;
+  bottom:36px;
+  right:40px;
+}
+
+.jumbotron {
+  /*margin:auto 6rem auto 3rem;*/
+}
+
+.btn:not(:disabled):not(.disabled) {
+  margin:auto 10px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  margin:0px 3px;
+}
+
+.jumbotron {
+  text-align:left;
+  padding:20px;
+  -webkit-box-shadow:0 8px 6px -6px #999;
+  -moz-box-shadow:0 8px 6px -6px #999;
+  box-shadow:0 8px 6px -6px #999;
+}
+
+.mr-3 {
+  border-radius:50%;
+  width:100px;
+  height:100px;
+}
+
+strong {
+  font-weight:600;
+}
+

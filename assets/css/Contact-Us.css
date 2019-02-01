@@ -1,0 +1,54 @@
+.btn-default, .btn-primary, .btn-success, .btn-action .btn-info, .btn-warning, .btn-danger {
+  text-shadow:0 2px 1px rgba(0, 0, 0, .2);
+}
+
+.btn {
+  padding:10px 40px;
+  font-weight:bold;
+  border:0 none;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+
+.btn-default {
+  text-shadow:none;
+  background:transparent;
+  color:rgba(50,50,50,.5);
+  -webkit-box-shadow:inset 0px 0px 0px 3px rgba(50,50,50,.5);
+  -moz-box-shadow:inset 0px 0px 0px 3px rgba(50,50,50,.5);
+  box-shadow:inset 0px 0px 0px 3px rgba(50,50,50,.5);
+}
+
+.btn-default:hover, .btn-default:focus {
+  color:rgba(50,50,50,.8);
+  -webkit-box-shadow:inset 0px 0px 0px 3px rgba(50,50,50,.8);
+  -moz-box-shadow:inset 0px 0px 0px 3px rgba(50,50,50,.8);
+  box-shadow:inset 0px 0px 0px 3px rgba(50,50,50,.8);
+  background:transparent;
+}
+
+.btn-default:active, .btn-default.active {
+  color:#333;
+  -webkit-box-shadow:inset 0px 0px 0px 3px #333;
+  -moz-box-shadow:inset 0px 0px 0px 3px #333;
+  box-shadow:inset 0px 0px 0px 3px #333;
+  background:transparent;
+}
+
+.row {
+  margin:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Open sans", Helvetica, Arial;
+}
+
+.row {
+  margin:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Open sans", Helvetica, Arial;
+}
+
