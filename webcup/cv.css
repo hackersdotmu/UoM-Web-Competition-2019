@@ -1,0 +1,48 @@
+/* CSS Document */
+
+body {
+  background-color: #efefef;
+}
+
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+	border-radius: 1000px !important;
+	overflow: hidden;
+	width: 128px;
+	height: 128px;
+	border: 4px solid #3E2323;
+	position: absolute;
+	top: 330px;
+	left: 168px;
+	float: left;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  position: absolute;
+  top: 330px;
+  right: 1200px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
