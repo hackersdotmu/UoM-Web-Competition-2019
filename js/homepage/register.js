@@ -32,9 +32,10 @@ function validate(e) {
             errorBox3.style.display = 'block';
             errorBox3.textContent = "Account Created Successfully";
 
+
             setTimeout(() => {
                 window.location.assign("includes/pages/dashboard.php")
-            }, 1500);
+            }, 2000);
         } else {
             errorBox2.style.display = 'block';
 

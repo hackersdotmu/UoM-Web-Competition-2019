@@ -10,7 +10,7 @@ $row=mysqli_fetch_array($tag,MYSQLI_ASSOC);
 
 $tag = $row['sector'];
 
-$result = mysqli_query($GLOBALS['con'], "SELECT * FROM post WHERE tag = '$tag' ORDER BY date");
+$result = mysqli_query($GLOBALS['con'], "SELECT * FROM post WHERE tag = '$tag' ORDER BY date DESC");
 $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 

@@ -90,8 +90,3 @@
 </body>
 </html>
 
-
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, veritatis, corrupti delectus explicabo soluta non dolorem at minus ipsam rerum sunt rem voluptate ipsum numquam dicta doloremque quam repudiandae unde.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, veritatis, corrupti delectus explicabo soluta non dolorem at minus ipsam rerum sunt rem voluptate ipsum numquam dicta doloremque quam repudiandae unde.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, veritatis, corrupti delectus explicabo soluta non dolorem at minus ipsam rerum sunt rem voluptate ipsum numquam dicta doloremque quam repudiandae unde.
