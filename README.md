@@ -54,5 +54,5 @@ _ _ _
 
 - - - 
 ### Technology Used
-Front-end: HTML5, CSS3, [Semantic-UI](https://semantic-ui.com/), javascript, jquery
-Back-end: Php7, mySql
+* Front-end: HTML5, CSS3, [Semantic-UI](https://semantic-ui.com/), javascript, jquery
+* Back-end: Php7, mySql
