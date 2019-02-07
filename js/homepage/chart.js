@@ -36,7 +36,7 @@ function changeChart(it, fi, eng, agr, law, sci) {
             labels: ["IT", "Finance", "Engineering", "Agriculture", "Law", "Science"],
             datasets: [{
                 data: [it, fi, eng, agr, law, sci],
-                backgroundColor: ['red', 'yellow', 'blue', 'green'],
+                backgroundColor: ['blue', 'yellow', 'red', 'green', 'orange', 'violet'],
                 borderWidth: 1
             }]
         },

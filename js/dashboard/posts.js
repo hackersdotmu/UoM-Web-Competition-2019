@@ -16,7 +16,7 @@ function fetchMyPosts(callback) {
                 document.getElementById('myPosts').innerHTML += `            
                 <div class="item data " id=${id}>
                 <div class="content">
-                <a class="header">${item['title']}</a>
+                <a class="header" href=../../includes/pages/postDetails.php?title=${replaceSpaces(item['title'])}&postId=${replaceSpaces(item['id'])}&createdBy=${replaceSpaces(item['createdBy'])}>${item['title']}</a>
                 <div class="description">${reduce(item['description'])}</div>
                 </div>
                 </div>

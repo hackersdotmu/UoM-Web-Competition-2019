@@ -19,8 +19,10 @@
 
 #statsArea .right .title {
     margin-bottom: 15%;
+    /* margin-left: 10%; */
 }
 
 #statsArea .right .counters {
     font-size: 4.5em;
+    margin-left: 25%;
 }

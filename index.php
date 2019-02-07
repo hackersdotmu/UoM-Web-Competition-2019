@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portal</title>
 
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
     <!-- Semantic ui cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
 
@@ -83,9 +86,6 @@
 
     <!-- search.js -->
     <script src="js/search.js"></script>
-
-
-
 
 </body>
 </html>

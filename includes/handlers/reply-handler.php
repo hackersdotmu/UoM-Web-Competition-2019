@@ -7,7 +7,7 @@ $receiver = $_POST['receiver'];
 $title = $_POST['title'];
 $date = date("Y/m/d");
 
-$query = mysqli_query($GLOBALS['con'], "INSERT INTO inbox VALUES ('','$message','$sender','$receiver','$title','$date');");
+$query = mysqli_query($GLOBALS['con'], "INSERT INTO inbox VALUES ('','$message','$sender','$receiver','$title','$date','0');");
 
 if($query){
     echo 'success';

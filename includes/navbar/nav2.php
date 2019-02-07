@@ -5,7 +5,7 @@
 
         <!-- Logo -->
         <div class="logo">
-            <a href="http://localhost/Web%20competition/includes/pages/dashboard.php"><span id="subLogo">mo&nbsp;</span>Portal</a>
+            <a href="http://localhost/moPortal/includes/pages/dashboard.php"><span id="subLogo">mo&nbsp;</span>Portal</a>
         </div>
 
         <!-- Search field -->
