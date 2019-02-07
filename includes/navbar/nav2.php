@@ -27,7 +27,7 @@
                 <span class="text" id="user"><?php echo $_SESSION['userLoggedIn']; ?></span>
                 <i class="dropdown icon"></i>
                 <div class="menu" tabindex="-1">
-                    <a class="item" href="http://localhost/Web%20competition/index.php">Log out</a>
+                    <a class="item" href="http://localhost/moPortal/index.php">Log out</a>
                     <a class="item" href="includes/profile.php">Edit Profile</a>
                 </div>
         </div>
