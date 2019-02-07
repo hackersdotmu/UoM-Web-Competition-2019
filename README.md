@@ -9,8 +9,8 @@ _ _ _
 ### Installation Instructions
 * Install XAMPP from *https://www.apachefriends.org/index.html* if you do not have it.
 * Navigate to `C:\xampp\htdocs` on your computer.
-* Create a new folder named *"moPortal"*.
-* Clone or download the website files to that folder.
+* Download the website folder in that path.
+* Rename the downloaded folder to *"moPortal"*.
 * Copy the contents of the file `portal.sql`
 * Open Xampp Control Panel from your computer.
 * Start Apache and MySql from there.
