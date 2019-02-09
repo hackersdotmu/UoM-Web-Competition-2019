@@ -138,6 +138,7 @@
                             </select>
                     </div><br><br>
 
+                    <!-- Recatcha button -->
                     <div class="field">
                          <div class="g-recaptcha" data-sitekey="6LeKFY4UAAAAAK_wO_RC5UvJpq2xIYi3kQ7unzkx"></div>
                     </div>

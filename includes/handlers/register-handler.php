@@ -1,6 +1,8 @@
 <?php 
 include('../config.php');
+
 $errorArray = array();
+
 $passwordsDoNoMatch = "Your passwords don't match";
 $passwordNotAlphanumeric = "Your password can only contain numbers and letters";
 $passwordCharacters = "Your password must be between 5 and 30 characters";
@@ -10,34 +12,48 @@ $lastNameCharacters = "Your last name must be between 2 and 25 characters";
 $firstNameCharacters = "Your first name must be between 2 and 25 characters";
 $usernameCharacters = "Your username must be between 5 and 25 characters";
 $usernameTaken = "This username already exists";
-	$username = sanitizeFormUsername($_POST['username']);
-	$firstName = sanitizeFormString($_POST['fname']);
-	$lastName = sanitizeFormString($_POST['lname']);
-	$email = sanitizeFormString($_POST['email']);
-	$password = sanitizeFormPassword($_POST['pwd']);
-	$password2 = sanitizeFormPassword($_POST['pwd2']);
-	$dob = $_POST['dob'];
-	$mobile = $_POST['mobile'];
-	$completed = sanitizeFormString($_POST['completed']);
-	$sector = sanitizeFormString($_POST['sector']);
-	$current = sanitizeFormString($_POST['current']);
-	$institution = sanitizeFormString($_POST['institution']);
-	$secretKey = '6LeKFY4UAAAAACm-gpvwPuvzbMoZ3ktLm8fVNnVy';
-	$responseKey = $_POST['g-recaptcha-response'];
-	$userIP = $_SERVER['REMOTE_ADDR'];
-	$url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
-	$response = file_get_contents($url);
-	$response = json_decode($response);
-	
-	$wasSuccessful = register($firstName, $lastName,$username,$dob,$mobile,$email, $password, $password2,$current,$completed,$institution,$sector);
-	
-	if($wasSuccessful == false) {
-		echo json_encode($errorArray);
-	}else{
-			// header("Location: ../pages/dashboard.php");
+
+$username = sanitizeFormUsername($_POST['username']);
+$firstName = sanitizeFormString($_POST['fname']);
+$lastName = sanitizeFormString($_POST['lname']);
+$email = sanitizeFormString($_POST['email']);
+$password = sanitizeFormPassword($_POST['pwd']);
+$password2 = sanitizeFormPassword($_POST['pwd2']);
+$completed = sanitizeFormString($_POST['completed']);
+$sector = sanitizeFormString($_POST['sector']);
+$current = sanitizeFormString($_POST['current']);
+$institution = sanitizeFormString($_POST['institution']);
+$dob = $_POST['dob'];
+$mobile = $_POST['mobile'];
+
+$secretKey = '6LeKFY4UAAAAACm-gpvwPuvzbMoZ3ktLm8fVNnVy';
+$responseKey = $_POST['g-recaptcha-response'];
+$userIP = $_SERVER['REMOTE_ADDR'];
+$url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
+$response = file_get_contents($url);
+$response = json_decode($response);
+
+
+if(validateAll($firstName,$lastName,$username,$email,$password, $password2) == true){
+	if($response->success){
+		$wasSuccessful = register($firstName, $lastName,$username,$dob,$mobile,$email, $password, $password2,$current,$completed,$institution,$sector);
+           if($wasSuccessful){
 			$_SESSION['userLoggedIn'] = $username;
 			echo 'true';
-	}
+		   }else{
+			array_push($errorArray, "Error inserting into database.");
+			echo json_encode($errorArray);
+		   }
+    }else{
+        array_push($errorArray, "Recaptcha verification failed! Please try again.");
+        echo json_encode($errorArray);
+    }
+}else{
+    echo json_encode($errorArray);
+}
+
+
+
 function sanitizeFormPassword($inputText) {
 	$inputText = strip_tags($inputText);
 	return $inputText;
@@ -74,7 +90,7 @@ function validateLastName($ln) {
 	   return;
    }
 }
-function validateEmails($em) {
+function validateEmail($em) {
    if(!filter_var($em, FILTER_VALIDATE_EMAIL)) {
 	   array_push($GLOBALS['errorArray'], $GLOBALS['emailInvalid']);
 	   return;
@@ -108,23 +124,21 @@ function validatePasswords($pw, $pw2) {
 	if($result){
 		return true;
 	}else{
+		array_push($GLOBALS['errorArray'], "Error inserting into database");
 		return false;
 	}
 	// var_dump($result);
 }
 function register($fn, $ln, $un, $dob, $mobile, $em, $pw,$pw2,$current,$comp,$inst,$sector) {
-	validateUsername($un);
-	validateFirstName($fn);
-	validateLastName($ln);
-	validateEmails($em);
-	validatePasswords($pw, $pw2);
-
-	if(empty($GLOBALS['errorArray']) == true) {
-		//Insert into db
-		return insertUserDetails($fn, $ln, $un, $dob, $mobile, $em, $pw,$current,$comp,$inst,$sector);
-	}else{
-		return false;
-	}
+	return insertUserDetails($fn, $ln, $un, $dob, $mobile, $em, $pw,$current,$comp,$inst,$sector);
 }
 	
-?>
+function validateAll($fn,$ln,$un,$em,$p1,$p2){
+    validateFirstName($fn);
+    validateLastName($ln);
+    validateUsername($un);
+    validateEmail($em);
+    validatePasswords($p1,$p2);
+
+    return empty($GLOBALS['errorArray']);
+}

@@ -56,3 +56,15 @@ _ _ _
 ### Technology Used
 * Front-end: HTML5, CSS3, [Semantic-UI](https://semantic-ui.com/), javascript, jquery
 * Back-end: Php7, mySql
+
+- - - 
+### Notes 
+#### Recaptcha
+* Get your api keys on *https://www.google.com/recaptcha/intro/v3.html* for recaptcha V2.
+* Change the secret key in `/includes/handlers/register-handler.php` to yours(Line 29).
+* Change the data-sitekey in `/includes/navbar/registration.php` to yours(Line 143).
+
+#### If website is not running on localhost:
+* Change url of logo link `/includes/navbar/nav.php`
+* Change url of logo link in `/includes/navbar/nav2.php`
+* Change url of logout link in `/includes/navbar/nav2.php`

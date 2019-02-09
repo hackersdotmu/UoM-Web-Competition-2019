@@ -47,6 +47,7 @@ function validate(e) {
                     temp += str;
                 })
                 errorBox2.innerHTML = temp;
+                grecaptcha.reset();
             }
 
         }
