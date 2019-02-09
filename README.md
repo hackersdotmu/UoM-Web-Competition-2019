@@ -61,10 +61,10 @@ _ _ _
 ### Notes 
 #### Recaptcha
 * Get your api keys on *https://www.google.com/recaptcha/intro/v3.html* for recaptcha V2.
-* Change the secret key in `/includes/handlers/register-handler.php` to yours(Line 29).
-* Change the data-sitekey in `/includes/navbar/registration.php` to yours(Line 143).
+* Change the secret key in `/includes/handlers/register-handler.php` to yours (Line 29).
+* Change the data-sitekey in `/includes/navbar/registration.php` to yours (Line 143).
 
 #### If website is not running on localhost:
-* Change url of logo link `/includes/navbar/nav.php`
-* Change url of logo link in `/includes/navbar/nav2.php`
-* Change url of logout link in `/includes/navbar/nav2.php`
+* Change url of logo link `/includes/navbar/nav.php` (Line 7).
+* Change url of logo link in `/includes/navbar/nav2.php` (Line 8).
+* Change url of logout link in `/includes/navbar/nav2.php` (Line 30).
