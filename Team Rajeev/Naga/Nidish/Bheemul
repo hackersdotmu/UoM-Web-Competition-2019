@@ -1,0 +1,56 @@
+#include <iostream> 
+#include <string> 
+#include <cstring> 
+ 
+using namespace std; 
+ 
+int main() 
+{ 
+ 
+ 
+  string Text; 
+  char c; 
+  int Enew; 
+  int x=0,y,a=0,b; 
+ 
+ 
+ 
+    cout << "Please enter sentence \n"; 
+    getline(cin,Text); 
+    y = Text.size(); 
+    char g [y + 1]; 
+    char char_array[y + 1]; 
+ 
+ strcpy(char_array, Text.c_str()); 
+ strcpy(g, Text.c_str()); 
+ 
+ cout <<"The Encryption is \n "; 
+ 
+    for (x = 0; y; x++){ 
+         c=(int)char_array[y-1]; 
+        y--; 
+ 
+        Enew = c + 5; 
+        cout << (char)Enew ; 
+        g[y] = (char)Enew; 
+ 
+    } 
+ 
+    cout << "The decryption is "; 
+ 
+ 
+    b = Text.size(); 
+ 
+    for (int a = 0; a<b;){ 
+        c =(int)g[a]; 
+        Enew = c-5; 
+        cout << (char)Enew; 
+        a++; 
+ 
+    } 
+ 
+ 
+ 
+    return 0; 
+ 
+  } 
